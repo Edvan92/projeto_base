@@ -18,7 +18,7 @@ Programas exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnolo
 <br>
 
 <p align="center">
-  <img alt="calendario da copa" src=".github/preview.jpg" width="100%">
+  <img alt="laDevlink" src=".github/Dark mode.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -28,13 +28,14 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - HTML e CSS
 - JavaScript
 - Git e Github
+- Figma
 
 ## 💻 Projeto
-
+Agregador de link para cartão de visita.
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/J1Z33MISC22YZB8wfxiIns/NLW-Copa-Explorer/duplicate). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+Você pode visualizar o layout do projeto através [DESSE LINK]. É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
 ## :memo: Licença
 
@@ -42,4 +43,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ♥ por AMPSTECH :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
+Feito com ♥ por AMPSTECH :wave:
