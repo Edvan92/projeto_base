@@ -82,11 +82,12 @@ body * {
   position: absolute;
   transform: translateY(-46.5%);
   top: 50%;
-
+  pointer-events: stronk;
 }
 .light #switch button{
   right: 0;
   left: initial;
+  
   
 }
 
