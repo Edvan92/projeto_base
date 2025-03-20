@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap");
+/* media queries */
+@media(min-width: 700px) {
+  :root{
+    --bg-url: url(assets/bg-desktop.jpg);
+  }
+  .light{
+    --bg-url: url(assets/bg-desktop-light.jpg);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,12 +28,15 @@
   --switch-bg-url:url(assets/star.svg);
 
 }
+
 body {
   background:var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   color: var(--text-color);
   font-family: "Inter", serif;
+  
 }
 
 #container {
