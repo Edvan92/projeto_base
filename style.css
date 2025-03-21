@@ -2,11 +2,31 @@
 /* media queries */
 @media(min-width: 700px) {
   :root{
-    --bg-url: url(assets/bg-desktop.jpg);
+    --bg-url: url(assets/bg-mobile.jpg);
   }
   .light{
-    --bg-url: url(assets/bg-desktop-light.jpg);
+    --bg-url: url(assets/bg-mobile-light.jpg);
   }
+}
+
+/* animation*/
+@keyframes slide-in{
+  from{
+    left: 0;
+  }
+  to{
+    left: 50%;
+  }
+}
+
+@keyframes slide-return{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
+  
 }
 
 * {
@@ -17,20 +37,26 @@
 
 :root{
   --text-color: #f9f5f5;
-  --bg-url:url(assets/bg-mobile.jpg);
+  --bg-url:url(assets/bg-desktop.jpg);
   --stroke-color:rgb(139, 110, 168);
   --switch-bg-url:url(assets/moon.svg);
+  --highlight-color:rgb(86, 57, 118);
+  --surface-color:rgb(255, 255, 255, 0.1);
+  
 }
 
 .light{
   --text-color:rgb(1, 1, 1);
-  --bg-url:url(assets/bg-mobile-light.jpg);
+  --bg-url:url(assets/bg-desktop-light.jpg);
+  --stroke-color:rgb(139, 110, 168);
   --switch-bg-url:url(assets/star.svg);
+  --highlight-color:rgb(86, 57, 118);
+  --surface-color:rgb(255, 255, 255, 0.1);
 
 }
 
 body {
-  background:var(--bg-url) no-repeat top center/cover;
+  background:var(--bg-url) no-repeat center/cover;
   height: 100vh;
 }
 body * {
@@ -68,27 +94,32 @@ body * {
   position: relative;
   width: 64px;
 
-  margin: 4px auto;
-  
+  margin: 0 auto;
 
 }
 #switch button{
-  width: 32px;
-  height: 64px;
+  width: 33.4px;
+  height: 33.4px;
   background: var(--switch-bg-url) no-repeat center;
   border: 0;
   
+  margin-bottom: 5px;
+
   z-index: 1;
   position: absolute;
-  transform: translateY(-46.5%);
-  top: 50%;
-  pointer-events: stronk;
+  transform: translateY(-50%);
+  top: 55%;
+
+  animation: slide-return 0.5s;  
 }
 .light #switch button{
-  right: 0;
-  left: initial;
-  
-  
+ animation: slide-in 0.5s forwards;
+ 
+}
+
+#switch button:hover{
+  border-radius:50%;
+  outline:9px solid var(--surface-color);
 }
 
 #switch span{
@@ -114,7 +145,7 @@ ul {
 }
 
 ul li a {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface-color);
   backdrop-filter: blur(4px);
 
   border: 1px solid var(--stroke-color);
@@ -134,8 +165,7 @@ ul li a {
 }
 
 ul li a:hover {
-  background: rgb(139, 110, 168);
-  
+  background: var(--highlight-color);  
   border: 1px solid var(--stroke-color);
 }
 
@@ -160,7 +190,7 @@ ul li a:hover {
   border-radius: 30px 30px 30px 30px;
 }
 #social-link a:hover {
-  background-color: rgb(139, 110, 168);
+  background-color: var(--highlight-color);
   transform: rotateY(180deg);
   
 }
